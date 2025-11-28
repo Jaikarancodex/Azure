@@ -79,6 +79,8 @@ RBAC controls:
 Assign “VM Contributor” to a Developer at Resource Group level →  
 They can manage VMs but cannot modify permissions or access other services.
 
+---
+
 # 💥 Cloud Concepts
 
 ## 2.1 IaaS, PaaS, SaaS (Service Models)
