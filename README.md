@@ -2,24 +2,24 @@
 
 # 💥 Core Azure Architectural Components
 
-## 1.1 Regions, Availability Zones, Resource Groups
+## ✔  1.1 Regions, Availability Zones, Resource Groups
 
-### **Azure Region**
+### 🔹 **Azure Region**
 A Region is a geographical area containing one or more datacenters.  
 Used for: low latency, compliance, disaster recovery.
 
-### **Availability Zones (AZs)**
+### 🔹  **Availability Zones (AZs)**
 Physically separate datacenters within the same region.  
 Each zone has independent power, cooling, networking.  
 Provides high availability.
 
-### **Resource Groups (RGs)**
+### 🔹  **Resource Groups (RGs)**
 A logical container for Azure resources.  
 Used for organizing, managing permissions, applying policies.
 
 ---
 
-## 1.2 Azure Resource Manager (ARM)
+## ✔  1.2 Azure Resource Manager (ARM)
 
 **ARM (Azure Resource Manager)** is the deployment and management layer of Azure.
 
@@ -31,19 +31,19 @@ Functions:
 
 ---
 
-## 1.3 Azure Compute Options
+## ✔  1.3 Azure Compute Options
 
-### **Virtual Machines (VMs)**
+### 🔹**Virtual Machines (VMs)**
 Full control over OS, networking, runtime.
 
-### **App Services**
+### 🔹 **App Services**
 Platform-as-a-Service (PaaS) for hosting web apps, APIs.
 
-### **Containers**
+### 🔹 **Containers**
 Lightweight, portable compute.  
 Azure services: ACI, AKS.
 
-### **Azure Functions**
+### 🔹 **Azure Functions**
 Serverless compute.  
 Pay-per-execution.
 
@@ -56,20 +56,20 @@ RBAC controls:
 - **WHAT** (Role Definition)
 - **WHERE** (Scope)
 
-### Security Principal (WHO?)
+### 🔹 Security Principal (WHO?)
 - User
 - Group
 - Service Principal
 - Managed Identity
 
-### Role Definitions (WHAT?)
+### 🔹 Role Definitions (WHAT?)
 - Owner
 - Contributor
 - Reader
 - VM Contributor
 - Storage Blob Reader
 
-### Scope (WHERE?)
+### 🔹 Scope (WHERE?)
 - Management Group
 - Subscription
 - Resource Group
@@ -83,9 +83,9 @@ They can manage VMs but cannot modify permissions or access other services.
 
 # 💥 Cloud Concepts
 
-## 2.1 IaaS, PaaS, SaaS (Service Models)
+## ✔  2.1 IaaS, PaaS, SaaS (Service Models)
 
-### 2.1.1 IaaS — Infrastructure as a Service
+### 🔹 2.1.1 IaaS — Infrastructure as a Service
 You manage the OS, apps, and runtime. The cloud provides hardware.
 
 Examples:
@@ -99,7 +99,7 @@ Full control over servers.
 
 ---
 
-### 2.1.2 PaaS — Platform as a Service
+### 🔹 2.1.2 PaaS — Platform as a Service
 Cloud provides the platform; you manage only the application.
 
 Examples:
@@ -113,7 +113,7 @@ Focus on code, not servers.
 
 ---
 
-### 2.1.3 SaaS — Software as a Service
+### 🔹 2.1.3 SaaS — Software as a Service
 Fully managed applications delivered over the internet.
 
 Examples:
@@ -127,9 +127,9 @@ End users consume the application directly.
 
 ---
 
-## 2.2 Cloud Deployment Models
+## ✔  2.2 Cloud Deployment Models
 
-### Public Cloud
+### 🔹 Public Cloud
 Services delivered via the internet; shared physical hardware.
 
 Examples:
@@ -142,7 +142,7 @@ Cons: Less isolation
 
 ---
 
-### Private Cloud
+### 🔹 Private Cloud
 Dedicated cloud environment for one organization.
 
 Examples:
@@ -154,7 +154,7 @@ Cons: Expensive
 
 ---
 
-### Hybrid Cloud
+### 🔹 Hybrid Cloud
 Mix of public + private cloud.
 
 Examples:
@@ -165,9 +165,9 @@ Use Case: Banking, healthcare, govt.
 
 ---
 
-## 2.3 CapEx vs OpEx
+## ✔ 2.3 CapEx vs OpEx
 
-### CapEx — Capital Expenditure
+### 🔹 CapEx — Capital Expenditure
 Upfront investment in physical assets.
 
 Examples:
@@ -181,7 +181,7 @@ Characteristics:
 
 ---
 
-### OpEx — Operational Expenditure
+### 🔹 OpEx — Operational Expenditure
 Pay‑as‑you‑go cloud billing.
 
 Examples:
@@ -192,9 +192,9 @@ Examples:
 
 # 💥 Azure Compute Services
 
-## 3.1 Virtual Machines (VMs)
+## ✔  3.1 Virtual Machines (VMs)
 
-### 3.1.1 VM Sizing, Pricing, and Scaling
+###  🔹 3.1.1 VM Sizing, Pricing, and Scaling
 - **VM Sizing:** Choose CPU, RAM, storage, and GPU based on workloads.  
   Examples: B-series (basic), D-series (general purpose), F-series (compute optimized), NV-series (GPU).
 
@@ -207,7 +207,7 @@ Examples:
 
 ---
 
-### 3.1.2 VM Deployment and Management
+### 🔹 3.1.2 VM Deployment and Management
 - Deploy via **Azure Portal**, **Azure CLI**, **ARM Templates**, or **Terraform**.  
 - Management includes:  
   - Start/stop/restart  
@@ -218,7 +218,7 @@ Examples:
 
 ---
 
-## 3.2 Azure App Services
+## ✔  3.2 Azure App Services
 A fully managed **Platform-as-a-Service (PaaS)** for hosting:
 - Web apps  
 - Mobile backends  
@@ -233,7 +233,7 @@ Features:
 
 ---
 
-## 3.3 Azure Functions
+##  ✔  3.3 Azure Functions
 A **serverless compute** service.  
 You run small pieces of code (functions) that trigger on:
 - HTTP requests  
@@ -249,7 +249,7 @@ Benefits:
 
 ---
 
-## 3.4 Azure Kubernetes Service (AKS)
+##  ✔  3.4 Azure Kubernetes Service (AKS)
 A managed Kubernetes orchestration service.
 
 Features:
@@ -265,14 +265,14 @@ Use Cases:
 
 ---
 
-## 3.5 Cloud Service Models
-### IaaS — Infrastructure as a Service
+##  ✔ 3.5 Cloud Service Models
+### 🔹 IaaS — Infrastructure as a Service
 Virtual Machines, Networking, Storage.
 
-### PaaS — Platform as a Service
+### 🔹 PaaS — Platform as a Service
 App Services, Azure SQL, AKS (partially).
 
-### SaaS — Software as a Service
+### 🔹 SaaS — Software as a Service
 Microsoft 365, Dynamics 365, Outlook.com.
 
 Cloud service models determine **how much control** vs **how much management** the cloud handles.
@@ -299,13 +299,13 @@ This document covers:
 
 Blob = **Binary Large Object** → used for storing unstructured data.
 
-###  What can you store?
+### 🔹 What can you store?
 - Images, videos, PDFs
 - Application logs
 - Backups
 - Website static content
 
-### 🔹 Blob Storage Types
+### ⚡ Blob Storage Types
 | Blob Type | Purpose |
 |----------|----------|
 | **Block Blob** | General files (images, videos, docs). Most common. |
@@ -313,7 +313,6 @@ Blob = **Binary Large Object** → used for storing unstructured data.
 | **Page Blob** | Used for **Azure VM disks**. |
 
 ### 🔹 Storage Structure
-
  
 - **Storage Account** = parent container  
 - **Container** = folder  
@@ -321,9 +320,9 @@ Blob = **Binary Large Object** → used for storing unstructured data.
 
 ---
 
-## 4.2 Storage Tiers & Replication
+## ✔ 4.2 Storage Tiers & Replication
 
-### 🔹 A. Storage Tiers (Performance + Cost Levels)
+### ⚡ A. Storage Tiers (Performance + Cost Levels)
 
 Azure offers three tiers based on how often you access data:
 
@@ -335,7 +334,7 @@ Azure offers three tiers based on how often you access data:
 
 ---
 
-### 🔹 B. Replication (Data Protection & Durability)
+### ⚡ B. Replication (Data Protection & Durability)
 
 Replication determines how many **copies** of your data exist and **where** they are stored.
 
@@ -354,7 +353,7 @@ Replication determines how many **copies** of your data exist and **where** they
 
 ---
 
-## 4.3 Access Control & SAS (Shared Access Signatures)
+## ✔ 4.3 Access Control & SAS (Shared Access Signatures)
 
 ### 🔹A. Access Control Options
 
@@ -380,20 +379,20 @@ Useful for granular permissions.
 
 SAS = **Temporary secure link** that grants limited access to storage resources **without exposing account keys**.
 
-### SAS lets you control:
+### 🔹 SAS lets you control:
 - **What** → read, write, delete, list  
 - **Where** → specific blob or container  
 - **When** → expiry times  
 - **How** → IP restrictions, HTTPS only  
 
-### 🔹 Types of SAS:
+### ⚡ Types of SAS:
 | SAS Type | Description |
 |----------|-------------|
 | **User Delegation SAS** | Generated with Azure AD identity (most secure) |
 | **Service SAS** | Access to specific storage service (Blob/File/Queue/Table) |
 | **Account SAS** | Broad access across services in an account |
 
-### ✔  Example Use Case
+### 🔹  Example Use Case
 You want to allow a client to download a file for **1 hour**:
 1. Generate a **read‑only SAS URL**  
 2. Send it  
@@ -401,7 +400,7 @@ You want to allow a client to download a file for **1 hour**:
 
 ---
 
-## ✔  Quick Revision Summary
+##  ✔  Quick Revision Summary
 
 - **Blob Storage** stores unstructured data (block, append, page).  
 - **Tiers:** Hot → Cool → Archive (cost decreases, latency increases).  
@@ -409,4 +408,66 @@ You want to allow a client to download a file for **1 hour**:
 - **SAS:** Gives temporary, restricted access without sharing account keys.
 
 ---
- 
+
+# 💥 Azure Key Vault, Azure Functions, Azure Logic Apps
+
+## ✔  1. Azure Key Vault
+
+A secure service to store:
+- Secrets  
+- Passwords  
+- Keys  
+- Certificates  
+
+### 🔹 Why We Use It
+- Prevent hardcoding secrets in code  
+- Protect sensitive information  
+- Centralized key and secret management  
+
+### 🎯 Definition
+Azure Key Vault securely stores and manages secrets, keys, and certificates to prevent sensitive data exposure.
+
+---
+
+## ✔  2. Azure Functions
+
+A serverless compute service that runs code only when triggered.
+
+### 🔹 What It Does
+- Executes code based on events  
+- Auto-scales automatically  
+- Pay only when it runs  
+
+### 🎯 Definition
+Azure Functions is an event-driven serverless compute platform that runs code automatically when triggered, with auto-scaling and pay-per-use pricing.
+
+---
+
+## ✔  3. Azure Logic Apps
+
+A no‑code workflow automation and integration service.
+
+### 🔹 What It Does
+- Connects services together  
+- Automates workflows  
+- Integrates apps like Teams, SAP, SQL, Gmail, Salesforce  
+
+### 🔹 Examples
+- When an email arrives → upload attachment to Blob  
+- When a file lands in Storage → send notification  
+- Scheduled jobs without writing code  
+
+### 🎯 Definition
+Azure Logic Apps is a no-code integration and workflow automation service that connects systems and automates business processes.
+
+---
+
+## ⚡ How They Work Together
+
+- **Logic Apps** → orchestrate workflows  
+- **Functions** → run custom code inside the workflow  
+- **Key Vault** → securely store secrets used by both  
+
+### 🔹 Example Flow
+A Logic App triggers → calls Azure Function → Function retrieves a secret from Key Vault.
+
