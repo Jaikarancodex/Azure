@@ -639,12 +639,12 @@ ADF then loads cleaned data from SQL into ADLS for analytics.
 
 ### ⚡ Quick Summary
 
- **ADF = ETL orchestration tool**
- **Pipelines = workflow**
- **Activities = tasks inside pipeline**
- **Copy Activity = ingestion**
- **Data Flow / Databricks = transformation**
- **Azure SQL Database = managed SQL Server in cloud**
+* **ADF = ETL orchestration tool**
+* **Pipelines = workflow**
+* **Activities = tasks inside pipeline**
+* **Copy Activity = ingestion**
+* **Data Flow / Databricks = transformation**
+* **Azure SQL Database = managed SQL Server in cloud**
 
 ---
 
