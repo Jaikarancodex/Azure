@@ -471,3 +471,183 @@ Azure Logic Apps is a no-code integration and workflow automation service that c
 ### 🔹 Example Flow
 A Logic App triggers → calls Azure Function → Function retrieves a secret from Key Vault.
 
+---
+
+# 💥 Azure Data Factory (ADF)
+
+ADF = Azure’s **ETL / ELT orchestration service**.
+It **moves**, **copies**, and **transforms** data between systems.
+
+Think of it like **Databricks Workflows + Copy tool + Orchestrator** in one place.
+
+---
+
+# ✔ **6.1.1 Data Ingestion & Transformation – What Actually Happens**
+
+### 🔹 ** Data Ingestion (Copying Data)**
+
+ADF ingests data from:
+
+* On-prem SQL Server
+* Azure SQL
+* Blob Storage
+* Data Lake
+* SaaS apps (Salesforce, Dynamics)
+* REST APIs
+* File shares, SFTP
+
+The main tool used here is **Copy Activity**.
+
+It reads from **Source** → writes to **Sink (destination)**.
+
+### ✔ Example
+
+Copy data from **SQL Server** to **Azure Data Lake** every 1 hour.
+
+* Source: On-prem SQL
+* Sink: ADLS Gen2
+* Integration Runtime handles connectivity
+
+---
+
+### **🔹 Data Transformation Options in ADF**
+
+ADF itself is NOT a compute engine (except Data Flows).
+It triggers external compute like:
+
+| Tool                            | When used                                                       |
+| ------------------------------- | --------------------------------------------------------------- |
+| **Mapping Data Flow**           | Drag-and-drop transformations (joins, filters, derived columns) |
+| **Databricks Notebook**         | Big data transforms using Spark                                 |
+| **Azure SQL Stored Procedures** | Small transformations in SQL                                    |
+| **Azure Functions**             | Custom logic                                                    |
+| **HDInsight / Synapse**         | Big analytics workloads                                         |
+
+### ✔ Simple Example
+
+You want to clean sales data:
+
+* Read raw CSV
+* Filter invalid rows
+* Add new calculated columns
+* Write cleaned data to ADLS
+
+→ Use **Mapping Data Flow** or trigger a **Databricks notebook**.
+
+---
+
+## ✔ **6.1.2 Pipelines & Activities – Backbone of ADF**
+
+---
+
+### 🔹 What is a Pipeline?
+
+Pipeline = **container for your workflow**.
+A pipeline holds a sequence of steps (activities) to run.
+
+Think of it like:
+📦 *A folder that contains all tasks to move or transform your data.*
+
+---
+
+### 🔹 What is an Activity?
+
+Activity = **one task** inside a pipeline.
+
+### 🔹 Types of Activities
+
+| Category                | Examples                               |
+| ----------------------- | -------------------------------------- |
+| **Data movement**       | Copy Activity                          |
+| **Data transformation** | Mapping Data Flow, Databricks Notebook |
+| **Control**             | If, ForEach, Wait, Switch              |
+| **External compute**    | Azure SQL, Synapse, HDInsight          |
+| **General**             | Web activity, Lookup                   |
+
+---
+
+### 🔹 Example of a Pipeline
+
+Pipeline: **Daily Sales ETL**
+
+Activities inside the pipeline:
+1️⃣ Lookup activity → Fetch date range
+2️⃣ Copy activity → Move raw data to ADLS
+3️⃣ Data Flow activity → Clean & transform data
+4️⃣ Notebook activity → Run advanced logic
+5️⃣ Email/Webhook → Send success notification
+
+Pipeline executes everything in sequence or parallel.
+
+---
+
+### 🔹 How triggers work
+
+Triggers start pipelines automatically:
+
+| Trigger              | When used                          |
+| -------------------- | ---------------------------------- |
+| **Schedule Trigger** | every x mins/hours/days            |
+| **Event Trigger**    | when a new file arrives in storage |
+| **Manual Trigger**   | run on demand                      |
+
+Example:
+"Run pipeline at 2 AM daily" → Schedule Trigger.
+
+---
+
+## ✔ **6.2 Azure SQL Database – Simple & Clear**
+
+Azure SQL Database = **fully managed relational database** in Azure.
+It is the cloud version of Microsoft SQL Server.
+
+### 🔹 Key features
+
+* No need to manage hardware or OS
+* Auto backups
+* Automatic patching
+* Geo-replication for DR
+* Built-in performance tuning
+* Scales up or down easily
+
+---
+
+## 🔹 When to use Azure SQL Database?
+
+Use it when you need:
+
+✔ OLTP workloads (transactions)
+✔ Highly available SQL engine
+✔ Minimal admin work
+✔ Automatic security and backup
+✔ Integration with ADF, Synapse, Power BI
+
+---
+
+## 🔹 Simple Example Use Case
+
+Your application stores:
+
+* customer profiles
+* orders
+* inventory
+
+Azure SQL Database stores these tables.
+ADF then loads cleaned data from SQL into ADLS for analytics.
+
+---
+
+# ⚡ Quick Summary
+
+ **ADF = ETL orchestration tool**
+ **Pipelines = workflow**
+ **Activities = tasks inside pipeline**
+ **Copy Activity = ingestion**
+ **Data Flow / Databricks = transformation**
+ **Azure SQL Database = managed SQL Server in cloud**
+
+---
+
+
+
+
