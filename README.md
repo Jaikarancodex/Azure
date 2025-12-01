@@ -482,7 +482,7 @@ Think of it like **Databricks Workflows + Copy tool + Orchestrator** in one plac
 
 ---
 
-# ✔ **6.1.1 Data Ingestion & Transformation – What Actually Happens**
+## ✔ **6.1.1 Data Ingestion & Transformation – What Actually Happens**
 
 ### 🔹 ** Data Ingestion (Copying Data)**
 
@@ -500,7 +500,7 @@ The main tool used here is **Copy Activity**.
 
 It reads from **Source** → writes to **Sink (destination)**.
 
-### ✔ Example
+### 🔹 Example
 
 Copy data from **SQL Server** to **Azure Data Lake** every 1 hour.
 
@@ -510,7 +510,7 @@ Copy data from **SQL Server** to **Azure Data Lake** every 1 hour.
 
 ---
 
-### **🔹 Data Transformation Options in ADF**
+### ** 🔹 Data Transformation Options in ADF**
 
 ADF itself is NOT a compute engine (except Data Flows).
 It triggers external compute like:
@@ -523,7 +523,9 @@ It triggers external compute like:
 | **Azure Functions**             | Custom logic                                                    |
 | **HDInsight / Synapse**         | Big analytics workloads                                         |
 
-### ✔ Simple Example
+---
+
+### 🔹  Simple Example
 
 You want to clean sales data:
 
@@ -537,8 +539,6 @@ You want to clean sales data:
 ---
 
 ## ✔ **6.1.2 Pipelines & Activities – Backbone of ADF**
-
----
 
 ### 🔹 What is a Pipeline?
 
@@ -571,11 +571,11 @@ Activity = **one task** inside a pipeline.
 Pipeline: **Daily Sales ETL**
 
 Activities inside the pipeline:
-1️⃣ Lookup activity → Fetch date range
-2️⃣ Copy activity → Move raw data to ADLS
-3️⃣ Data Flow activity → Clean & transform data
-4️⃣ Notebook activity → Run advanced logic
-5️⃣ Email/Webhook → Send success notification
+* 1️⃣ Lookup activity → Fetch date range
+* 2️⃣ Copy activity → Move raw data to ADLS
+* 3️⃣ Data Flow activity → Clean & transform data
+* 4️⃣ Notebook activity → Run advanced logic
+* 5️⃣ Email/Webhook → Send success notification
 
 Pipeline executes everything in sequence or parallel.
 
@@ -601,7 +601,7 @@ Example:
 Azure SQL Database = **fully managed relational database** in Azure.
 It is the cloud version of Microsoft SQL Server.
 
-### 🔹 Key features
+#### 🔹 Key features
 
 * No need to manage hardware or OS
 * Auto backups
@@ -612,19 +612,19 @@ It is the cloud version of Microsoft SQL Server.
 
 ---
 
-## 🔹 When to use Azure SQL Database?
+### 🔹 When to use Azure SQL Database?
 
 Use it when you need:
 
-✔ OLTP workloads (transactions)
-✔ Highly available SQL engine
-✔ Minimal admin work
-✔ Automatic security and backup
-✔ Integration with ADF, Synapse, Power BI
+* OLTP workloads (transactions)
+* Highly available SQL engine
+* Minimal admin work
+* Automatic security and backup
+* Integration with ADF, Synapse, Power BI
 
 ---
 
-## 🔹 Simple Example Use Case
+### 🔹 Simple Example Use Case
 
 Your application stores:
 
@@ -637,7 +637,7 @@ ADF then loads cleaned data from SQL into ADLS for analytics.
 
 ---
 
-# ⚡ Quick Summary
+### ⚡ Quick Summary
 
  **ADF = ETL orchestration tool**
  **Pipelines = workflow**
