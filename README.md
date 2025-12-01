@@ -88,13 +88,13 @@ They can manage VMs but cannot modify permissions or access other services.
 ### 🔹 2.1.1 IaaS — Infrastructure as a Service
 You manage the OS, apps, and runtime. The cloud provides hardware.
 
-Examples:
+ Examples:
 - Virtual Machines (VMs)
 - Virtual Networks (VNet)
 - Load Balancers
 - Disks & Storage
 
-Use Case:
+ Use Case:
 Full control over servers.
 
 ---
@@ -219,12 +219,12 @@ Examples:
 ---
 
 ## ✔  3.2 Azure App Services
-A fully managed **Platform-as-a-Service (PaaS)** for hosting:
+🔹 A fully managed **Platform-as-a-Service (PaaS)** for hosting:
 - Web apps  
 - Mobile backends  
 - REST APIs  
 
-Features:
+🔹 Features:
 - Auto-scaling  
 - Deployment slots  
 - CI/CD integration  
@@ -234,14 +234,14 @@ Features:
 ---
 
 ##  ✔  3.3 Azure Functions
-A **serverless compute** service.  
+🔹 A **serverless compute** service.  
 You run small pieces of code (functions) that trigger on:
 - HTTP requests  
 - Timers  
 - Queue messages  
 - Blob uploads  
 
-Benefits:
+🔹 Benefits:
 - No server management  
 - Pay only per execution  
 - Auto-scaling  
@@ -252,14 +252,14 @@ Benefits:
 ##  ✔  3.4 Azure Kubernetes Service (AKS)
 A managed Kubernetes orchestration service.
 
-Features:
+🔹 Features:
 - Automated upgrades  
 - Scaling & self-healing  
 - Containerized application deployment  
 - Integration with monitoring & CI/CD  
 - Node pools and GPU support
 
-Use Cases:
+🔹 Use Cases:
 - Microservices  
 - Large-scale containerized applications
 
@@ -322,7 +322,7 @@ Blob = **Binary Large Object** → used for storing unstructured data.
 
 ## ✔ 4.2 Storage Tiers & Replication
 
-### ⚡ A. Storage Tiers (Performance + Cost Levels)
+### 🔹 A. Storage Tiers (Performance + Cost Levels)
 
 Azure offers three tiers based on how often you access data:
 
@@ -334,7 +334,7 @@ Azure offers three tiers based on how often you access data:
 
 ---
 
-### ⚡ B. Replication (Data Protection & Durability)
+### 🔹 B. Replication (Data Protection & Durability)
 
 Replication determines how many **copies** of your data exist and **where** they are stored.
 
@@ -385,7 +385,7 @@ SAS = **Temporary secure link** that grants limited access to storage resources 
 - **When** → expiry times  
 - **How** → IP restrictions, HTTPS only  
 
-### ⚡ Types of SAS:
+### 🔹 Types of SAS:
 | SAS Type | Description |
 |----------|-------------|
 | **User Delegation SAS** | Generated with Azure AD identity (most secure) |
