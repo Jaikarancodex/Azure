@@ -277,9 +277,136 @@ Microsoft 365, Dynamics 365, Outlook.com.
 
 Cloud service models determine **how much control** vs **how much management** the cloud handles.
 
-
-
 Characteristics:
 - No upfront cost
 - Scales with usage
 - Cloud provider maintains infra
+
+---
+
+# 💥  Azure Storage Services
+
+Azure Storage provides scalable, durable, secure cloud storage for apps and data.  
+This document covers:
+
+- **4.1 Blob Storage**
+- **4.2 Storage Tiers & Replication**
+- **4.3 Access Control & Shared Access Signatures (SAS)**
+
+---
+
+## 4.1 Blob Storage
+
+Blob = **Binary Large Object** → used for storing unstructured data.
+
+###  What can you store?
+- Images, videos, PDFs
+- Application logs
+- Backups
+- Website static content
+
+### 🔹 Blob Storage Types
+| Blob Type | Purpose |
+|----------|----------|
+| **Block Blob** | General files (images, videos, docs). Most common. |
+| **Append Blob** | Optimized for logs where data is appended. |
+| **Page Blob** | Used for **Azure VM disks**. |
+
+### 🔹 Storage Structure
+
+ 
+- **Storage Account** = parent container  
+- **Container** = folder  
+- **Blob** = actual file  
+
+---
+
+## 4.2 Storage Tiers & Replication
+
+### 🔹 A. Storage Tiers (Performance + Cost Levels)
+
+Azure offers three tiers based on how often you access data:
+
+| Tier | When to Use | Cost |
+|------|-------------|------|
+| **Hot Tier** | Frequently accessed data | Higher storage cost, low access cost |
+| **Cool Tier** | Infrequently accessed (≥ 30 days) | Lower storage cost |
+| **Archive Tier** | Rarely accessed (≥ 180 days) | Lowest storage cost, highest access cost |
+
+---
+
+### 🔹 B. Replication (Data Protection & Durability)
+
+Replication determines how many **copies** of your data exist and **where** they are stored.
+
+| Replication Type | Meaning | No. of Copies | Location |
+|------------------|----------|----------------|----------|
+| **LRS** (Locally Redundant Storage) | 3 copies in **one** datacenter | 3 | 1 AZ |
+| **ZRS** (Zone Redundant Storage) | Copies across **three AZs** | 3 | Same region |
+| **GRS** (Geo‑Redundant Storage) | LRS + copy to secondary region | 6 | Two regions |
+| **GZRS** (Geo‑Zone Redundant Storage) | ZRS + geo copy | 6 | Multi‑AZ + DR region |
+
+### 🔹 Replication Summary
+- **LRS** → Cheapest, single data center  
+- **ZRS** → Protects against AZ failure  
+- **GRS** → Protects against regional disaster  
+- **GZRS** → Highest durability + geo + zone redundancy  
+
+---
+
+## 4.3 Access Control & SAS (Shared Access Signatures)
+
+### 🔹A. Access Control Options
+
+#### 1. Role-Based Access Control (RBAC)
+Controls **who** can access the storage account at the Azure level.
+
+Common roles:
+- Storage Blob Reader  
+- Storage Blob Contributor  
+- Storage Blob Owner  
+
+#### 2. ACLs (Access Control Lists)
+Set permissions on:
+- Containers
+- Directories
+- Specific blobs  
+
+Useful for granular permissions.
+
+---
+
+### 🔹 B. SAS — Shared Access Signature
+
+SAS = **Temporary secure link** that grants limited access to storage resources **without exposing account keys**.
+
+### SAS lets you control:
+- **What** → read, write, delete, list  
+- **Where** → specific blob or container  
+- **When** → expiry times  
+- **How** → IP restrictions, HTTPS only  
+
+### 🔹 Types of SAS:
+| SAS Type | Description |
+|----------|-------------|
+| **User Delegation SAS** | Generated with Azure AD identity (most secure) |
+| **Service SAS** | Access to specific storage service (Blob/File/Queue/Table) |
+| **Account SAS** | Broad access across services in an account |
+
+### ✔  Example Use Case
+You want to allow a client to download a file for **1 hour**:
+1. Generate a **read‑only SAS URL**  
+2. Send it  
+3. Access expires automatically  
+
+---
+
+## ✔  Quick Revision Summary
+
+- **Blob Storage** stores unstructured data (block, append, page).  
+- **Tiers:** Hot → Cool → Archive (cost decreases, latency increases).  
+- **Replication:** LRS < ZRS < GRS < GZRS (in durability).  
+- **SAS:** Gives temporary, restricted access without sharing account keys.
+
+---
+ 
