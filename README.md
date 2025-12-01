@@ -480,8 +480,6 @@ It **moves**, **copies**, and **transforms** data between systems.
 
 Think of it like **Databricks Workflows + Copy tool + Orchestrator** in one place.
 
----
-
 ## ✔ **6.1.1 Data Ingestion & Transformation – What Actually Happens**
 
 ### 🔹 ** Data Ingestion (Copying Data)**
