@@ -334,6 +334,10 @@ Azure offers three tiers based on how often you access data:
 
 ---
 
+#### And One more tier
+<img width="1918" height="622" alt="image" src="https://github.com/user-attachments/assets/8f4e0117-cd57-4950-b1cd-fbd119c20e55" />
+
+
 ### 🔹 B. Replication (Data Protection & Durability)
 
 Replication determines how many **copies** of your data exist and **where** they are stored.
